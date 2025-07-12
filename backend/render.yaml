@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: attriwise-backend
+    env: python
+    buildCommand: ""
+    startCommand: python attrition_model.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
