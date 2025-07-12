@@ -26,6 +26,9 @@ encoder = joblib.load('model/label_encoder.pkl')
 feature_cols = joblib.load('model/feature_columns.pkl')
 explainer = shap.TreeExplainer(model)
 
+@app.route('/')
+def home():
+    return 'AttriWise backend is running!', 200
 
 @app.route('/predict', methods=['POST'])
 def predict():
