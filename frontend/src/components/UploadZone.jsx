@@ -22,7 +22,7 @@ export default function UploadZone({ setPredictions }) {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict", formData);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/predict`, formData);
       setPredictions(res.data); // set predictions in parent state
     } catch (err) {
       console.error("Upload failed", err);
