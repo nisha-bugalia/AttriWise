@@ -6,7 +6,7 @@ import shap
 import numpy as np
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "https://attri-wise.vercel.app"])
+CORS(app, origins=["http://localhost:5173", "https://attri-wise.vercel.app/"])
 
 def interpret_feature(name, value):
     mapping = {
