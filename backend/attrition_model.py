@@ -21,9 +21,9 @@ def interpret_feature(name, value):
 
 
 # Load model, encoders, and features
-model = joblib.load('./backend/model/attrition_model.pkl')
-encoder = joblib.load('./backend/model/label_encoder.pkl')
-feature_cols = joblib.load('./backend/model/feature_columns.pkl')
+model = joblib.load('model/attrition_model.pkl')
+encoder = joblib.load('model/label_encoder.pkl')
+feature_cols = joblib.load('model/feature_columns.pkl')
 explainer = shap.TreeExplainer(model)
 
 @app.route('/')
