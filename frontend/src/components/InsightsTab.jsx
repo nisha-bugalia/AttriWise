@@ -103,11 +103,11 @@ export default function InsightsTab({ predictions }) {
           leave.
         </p>
 
-        <ResponsiveContainer width="100%" height={350}>
+        <ResponsiveContainer width="100%" height={300}>
           <BarChart
             layout="vertical"
             data={featureData}
-            margin={{ top: 20, right: 30, left: 20, bottom: 10 }}
+            margin={{ top: 20, right: 30, left: 20, bottom: 50 }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis type="number" />

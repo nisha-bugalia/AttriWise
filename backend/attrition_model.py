@@ -6,7 +6,7 @@ import shap
 import numpy as np
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "https://attri-wise.vercel.app/"])
+CORS(app, origins=["http://localhost:5173", "https://attri-wise.vercel.app"])
 
 def interpret_feature(name, value):
     mapping = {
@@ -21,9 +21,9 @@ def interpret_feature(name, value):
 
 
 # Load model, encoders, and features
-model = joblib.load('model/attrition_model.pkl')
-encoder = joblib.load('model/label_encoder.pkl')
-feature_cols = joblib.load('model/feature_columns.pkl')
+model = joblib.load('./backend/model/attrition_model.pkl')
+encoder = joblib.load('./backend/model/label_encoder.pkl')
+feature_cols = joblib.load('./backend/model/feature_columns.pkl')
 explainer = shap.TreeExplainer(model)
 
 @app.route('/')
